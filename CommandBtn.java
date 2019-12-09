@@ -16,6 +16,7 @@ public class CommandBtn extends Actor
     {
         if(Greenfoot.mouseClicked(this))
         {
+            System.out.println("command");
             DroneControl.connect();
         }
     }

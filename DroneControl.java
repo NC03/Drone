@@ -5,15 +5,6 @@ public class DroneControl {
     private DatagramSocket ds;
     public static final byte[] byteAddr = { (byte) 192, (byte) 168, (byte) 10, (byte) 1 };
     private InetAddress addr;
-
-    public static void main(String[] args)
-    {
-        DroneControl ds = new DroneControl();
-        for(String arg : args){
-            ds.send(arg);
-        }
-        ds.close();
-    }
     
     public static void init()
     {
@@ -63,6 +54,32 @@ public class DroneControl {
             return "DPError: " + e.getMessage();
         }
     }
+    
+    public void forward(int n)
+    {
+        dc.send("forward "+n);
+    }
+    
+    public void back(int n)
+    {
+        dc.send("back "+n);
+    }
+    
+    public void left(int n)
+    {
+        dc.send("left "+n);
+    }
+    
+    public void right(int n)
+    {
+        dc.send("right "+n);
+    }
+    
+    public static void sendStr(String s)
+    {
+        dc.send(s);
+    }
+    
 
     public byte[] encode(String msg) {
         try {

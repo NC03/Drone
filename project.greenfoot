@@ -1,7 +1,7 @@
 #Greenfoot project file
-class.CommandBtn.image=smiley1.png
-class.LandBtn.image=kangaroo.png
-class.TakeoffBtn.image=rocket.png
+class.CommandBtn.image=bee.png
+class.LandBtn.image=rocket.png
+class.TakeoffBtn.image=butterfly.png
 dependency1.from=MyWorld
 dependency1.to=CommandBtn
 dependency1.type=UsesDependency
